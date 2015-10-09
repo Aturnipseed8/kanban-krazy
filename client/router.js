@@ -7,7 +7,7 @@ Router.configure({
       if (Meteor.loggingIn()) {
         // just wait if logging in;
       } else {
-        this.render('Login');
+        this.render({template: 'AppLayout'});
       }
     } else if (Router.current().route.getName() === 'login') {  // else user is loggedIn;
       this.redirect('/Dashboard');
